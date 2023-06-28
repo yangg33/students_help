@@ -1,0 +1,227 @@
+/*-------------------------------------------------------
+21. Footer css 
+---------------------------------------------------------*/
+
+footer {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.ft-shape {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+	width: 100%;
+	img {
+		width: 100%;
+	}
+}
+
+.footer-widget {
+	position: relative;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background-color: #060816;
+	}
+	&::after {
+		position: absolute;
+		z-index: -1;
+		height: 25%;
+		width: 100%;
+		background-color: var(--clr-def);
+		content: '';
+		bottom: -24%;
+		left: 0;
+		border-radius: 50% 50% 0 0;
+		opacity: .2;
+	}
+}
+
+//Copyright
+
+.copyright {
+	background-color: #060816;
+	padding: 30px 0;
+	.copyright-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 2rem;
+	}
+    p {
+        color: var(--clr-white);
+		a {
+			color: var(--clr-def);
+		}
+    }
+}
+
+//Footer widget wapper
+
+.footer-widget-title {
+	color: var(--clr-white);
+	position: relative;
+	padding-bottom: 3rem;
+	margin-bottom: 4rem;
+	z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		z-index: -1;
+		width: 6rem;
+		height: 4px;
+		background-color: var(--clr-white);
+		bottom: 0;
+		left: 0;
+	}
+}
+
+//Footer About
+
+.about-us {
+	.footer-logo {
+		margin-bottom: 4rem;
+	}
+	p {
+		color: var(--clr-ftr);
+		padding-right: 5rem;
+		line-height: 3.2rem;
+		margin-bottom: 4rem;
+	}
+}
+
+.footer-sub {
+	form {
+		position: relative;
+		z-index: 1;
+		.input-style-1 {
+			width: 90%;
+			border-radius: 5px;
+		}
+		.input-btn {
+			background-color: var(--clr-def);
+			color: var(--clr-white);
+			outline: none;
+			border: none;
+			position: absolute;
+			right: 43px;
+			top: 5px;
+			height: 4rem;
+			width: 4rem;
+			border-radius: 5px;
+			font-size: 1.5rem;
+			&:hover {
+				background-color: var(--clr-menu);
+			}
+		}
+	}
+}
+
+//Quick Links
+
+.footer-list {
+	display: flex;
+    flex-direction: column;
+    gap: 2rem;
+	li {
+		position: relative;
+		z-index: 1;
+		padding-left: 2.5rem;
+		&::before {
+			height: 7px;
+			width: 7px;
+			border-radius: 50%;
+			background-color: var(--clr-def);
+			top: 50%;
+			left: 0;
+			transform: translate(0,-50%);
+			position: absolute;
+			content: '';
+			z-index: -1;
+			transition: background-color .5s ease;
+		}
+		&::after {
+			height: 1.5rem;
+			width: 1.5rem;
+			border-radius: 50%;
+			border: 1px solid var(--clr-def);
+			top: 50%;
+			left: -4px;
+			transform: translate(0,-50%);
+			position: absolute;
+			content: '';
+			z-index: -1;
+			transition: border .5s ease;
+		}
+		a {
+			color: var(--clr-ftr);
+			transition: color .5s ease;
+		}
+		&:hover {
+			&::before {
+			background-color: var(--clr-menu);
+			}
+			&::after {
+				border: 1px solid var(--clr-menu);
+			}
+			a {
+				color: var(--clr-menu);
+			}
+		}
+	}
+}
+
+//Footer Contact
+
+.in-touch {
+	padding-left: 3rem;
+	.footer-address {
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			li {
+				display: flex;
+				flex-direction: column;
+				color: var(--clr-ftr);
+				gap: 1rem;
+				a {
+					color: var(--clr-ftr);
+				}
+			}
+		}
+	}
+}
+
+//Footer Social
+
+.footer-social {
+	display: flex;
+	gap: 1.5rem;
+	li {
+		a {
+			i {
+				height: 4rem;
+				width: 4rem;
+				line-height: 4rem;
+				text-align: center;
+				background-color: var(--clr-def);
+				color: var(--clr-white);
+				border-radius: 50%;
+				transition: background-color .5s ease;
+				&:hover {
+					background-color: var(--clr-menu);
+				}
+			}
+		}
+	}
+}

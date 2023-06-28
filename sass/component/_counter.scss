@@ -1,0 +1,89 @@
+/*-------------------------------------------------------
+12. Counter css
+---------------------------------------------------------*/
+
+
+.counter-area {
+	position: relative;
+	z-index: 1;
+}
+
+.circle-shape {
+    position: absolute;
+    top: -12%;
+    left: 10%;
+    z-index: -1;
+}
+
+//.counter-right {
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//}
+
+//.counter-wpr.grid-px-2 {
+//	grid-gap: 10rem;
+//}
+
+.counter {
+	.fun-fact {
+		text-align: center;
+		border-right: 1px solid #ccc;
+		&:last-child {
+			margin-right: 0;
+			border-right: none;
+			padding-right: 0;
+		}
+		.fun-icon {
+			font-size: 7rem;
+			color: var(--clr-def);
+			margin-bottom: 2.5rem;
+		}
+		.fun-desc {
+			.timer {
+				position: relative;
+				z-index: 1;
+				display: inline-block;
+				padding-right: 3rem;
+				font-size: 5rem;
+				font-weight: 700;
+				line-height: 1;
+				color: var(--clr-heading);
+				margin-bottom: 2rem;
+				&::before {
+					position: absolute;
+					z-index: -1;
+					content: attr(data-count);
+					right: 0;
+					top: 0;
+				}
+			}
+			.medium {
+				position: relative;
+				z-index: 1;
+				font-size: 1.6rem;
+				line-height: 2.2rem;
+				font-weight: 500;
+				letter-spacing: 0.0015em;
+				text-transform: capitalize;
+				display: block;
+			}
+		}
+	}
+}
+
+.counter-title {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 3rem;
+	text-transform: capitalize;
+	span {
+		color: var(--clr-def);
+	}
+}
+
+.partner-wpr.partner-sldr {
+    background-color: var(--clr-bg);
+    padding: 3rem;
+    border-radius: 3rem;
+}

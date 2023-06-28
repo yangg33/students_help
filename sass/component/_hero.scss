@@ -1,0 +1,342 @@
+
+/*-------------------------------------------------------
+08. Hero css 
+---------------------------------------------------------*/
+
+@mixin hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+	z-index: 1;
+	padding-top: 20vh;
+    padding-bottom: 30vh;
+}
+
+//Hero 1 #00008B
+
+.hero-section {
+	position: relative;
+	z-index: 1;
+    .hero-shape {
+		position: absolute;
+		z-index: 9;
+		width: 100%;
+		bottom: 0;
+		img {
+			width: 100%
+		}
+	}
+}
+
+.hero-single {
+    @include hero;
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		padding-bottom: 25rem;
+        .hero-title {
+			margin-bottom: 3rem;
+			color: var(--clr-white);
+			line-height: 1;
+			font-size: 10rem;
+			text-transform: uppercase;
+			font-weight: 700;
+        }
+		.hero-sub-title {
+			margin-bottom: 2rem;
+			color: var(--clr-white);
+		}
+		
+		p {
+			color: var(--clr-white);
+			font-size: 2.2rem;
+			line-height: 36px;
+			font-weight: 400;
+			margin-bottom: 4rem;
+			padding: 0 2rem;
+		}
+		
+        .hero-btn {
+            gap: 2rem;
+            line-height: 1;
+            display: flex;
+            margin-top: 1rem;
+			justify-content: center;
+        }
+    }
+}
+
+
+.hero-section.auto-height {
+	.hero-single {
+		height: auto;
+	}
+} 
+
+.hero-title {
+	font-size: 60px;
+	line-height: 8.1rem;
+	letter-spacing: -1.8px;
+	margin-bottom: 3rem;
+}
+
+.hero-sub-title {
+	font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+//Play Button
+
+//HTML
+//<div class="pl">
+//<a href="#" class="item popup-youtube play-bt">
+//<i>
+//<img src="assets/img/icons/play-button-1.png" alt="Itsol">
+//</i>
+//</a>
+//</div>
+
+.play-bt {
+    width: 9rem;
+    height: 9rem;
+    line-height: 9rem;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: var(--clr-def);
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	&::before {
+		content: '';
+		background-color: var(--clr-def);
+		opacity: .4;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		z-index: 0;
+		pointer-events: none;
+		-webkit-animation: button_wave 3s infinite ease-in-out;
+		animation: button_wave 3s infinite ease-in-out;
+	}
+}
+
+@-webkit-keyframes button_wave{
+  0% {
+    -webkit-box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+    box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+  }
+  50% {
+    -webkit-box-shadow:none;
+    box-shadow:none;
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+    box-shadow: 0 0 0 30px rgba(0, 170, 235,.65),0 0 0 50px rgba(0, 170, 235,.8);
+  }
+}
+
+//Hero Slider
+
+.hero-sldr.owl-theme .owl-nav {
+    margin-top: 0px;
+}
+
+.hero-sldr.owl-theme .owl-nav [class*=owl-] {
+    color:var(--clr-def);
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    background: var(--clr-white);
+    display: inline-block;
+    cursor: pointer;
+	height: 5rem;
+	width: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	border-radius: 50%;
+	box-shadow: 0 0 0px 10px rgba(55, 81, 126,.8);
+}
+
+.hero-sldr.owl-theme .owl-nav [class*=owl-]:hover {
+    background: var(--clr-def);
+    color: var(--clr-white);
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-prev {
+	left: 5rem;
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-next {
+	right: 5rem;
+}
+
+.hero-sldr.owl-theme .owl-nav .owl-prev,
+.hero-sldr.owl-theme .owl-nav .owl-next {
+	position: absolute;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+
+//Hero 2 background-color: #F9FDFA;
+
+.hero-2-single {
+	height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		background-color: var(--clr-bg);
+		opacity: .4;
+	}
+	.hero-2-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+        .hero-title {
+            margin-bottom: 3rem;
+			line-height: 8.1rem;
+        }
+		.hero-sub-title {
+			margin-bottom: 2rem;
+		}
+		p {
+			font-size: 1.6rem;
+			line-height: 30px;
+			font-weight: 400;
+			margin-bottom: 4rem;
+			padding: 0 10rem 0 0;
+		}
+    }
+	.hero-2-pic {
+		position: relative;
+		z-index: 1;
+		.hero-dot {
+			img {
+				position: absolute;
+				z-index: -1;
+				&:first-child {
+					bottom: 30%;
+				}
+				&:nth-child(2) {
+					top: -15%;
+					right: -2%;
+				}
+			}
+		}
+	}
+}
+
+.hero-2 {
+	img {
+		position: absolute;
+		&:first-child {
+			top: 21%;
+			left: 10%;
+		}
+	}
+}
+
+.bo {
+	height: 20rem;
+	width: 20rem;
+	clip-path: path("M 102.905 18.268 c 28.412 -37.588 97.208 3.111 97.208 58.371 A 100.057 100.057 0 0 1 0 76.639 C 0 21.379 74.493 55.857 102.905 18.268 Z");
+	background-color: var(--clr-def);
+	display: inline-block;
+}
+
+//hm 3
+
+.hm-3 {
+	.hero-single {
+		&::before {
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: #5416CF;
+			position: absolute;
+			z-index: -1;
+			content: '';
+			opacity: .7;
+		}
+	}
+}
+
+
+//Owl Carousel
+
+.hero-sldr {
+	.owl-item {
+		.hero-single {
+			.hero-content {
+				h2 {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 500ms ease;
+					transform: translateY(-20px);
+				}
+				p {
+					opacity: 0;
+					visibility: hidden;
+					transition: all 500ms ease;
+					transform: translateX(-50px);
+				}
+				.hero-btn {
+					transform: scaleY(0);
+					transition: all 500ms ease;
+					transition-delay: 2000ms;
+					transform-origin: bottom;
+				}
+			}
+		}
+	}
+}
+
+.hero-sldr {
+	.owl-item.active {
+		.hero-single {
+			.hero-content {
+				h2 {
+					opacity: 1;
+					visibility: visible;
+					transition-delay: 800ms;
+					transform: translateY(0px);
+				}
+				p {
+					opacity: 1;
+					visibility: visible;
+					transition-delay: 1600ms;
+					transform: translateX(0px);
+				}
+				.hero-btn {
+    				transform: scale(1);
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+

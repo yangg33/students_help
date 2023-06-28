@@ -1,0 +1,125 @@
+
+/*-------------------------------------------------------
+19. Fet Cnt css
+---------------------------------------------------------*/
+
+.fet-count {
+	&::before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		height: 70%;
+		width: 100%;
+		background-color: var(--clr-bg);
+		top: 0;
+		left: 0;
+	}
+}
+
+.counter-shape {
+	@include bottom-pos;
+}
+
+.progress-box {
+	margin-bottom: 3rem;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	h5 {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 2.5rem;
+	}
+	.progress {
+		background-color: #e9ecef;
+		border-radius: 0;
+		height: 3px;
+		.progress-bar {
+			background-color: var(--clr-def);
+		}
+	}
+}
+
+.cnt-left {
+	padding-right: 6rem;
+	h2 {
+		font-size: 3rem;
+		line-height: 4.8rem;
+		margin-bottom: 2rem;
+		text-transform: capitalize;
+		margin-top: -1rem;
+		font-weight: 700;
+	}
+}
+
+.fet-cnt-box {
+	padding:  4rem 2rem;
+	background-color: var(--clr-def);
+	text-align: center;
+	border-radius: var(--rad-1);
+	.fet-cnt-icon {
+		margin-bottom: 3rem;
+		i {
+			height: 7rem;
+			width: 7rem;
+			line-height: 7rem;
+			display: inline-block;
+			text-align: center;
+			border-radius: 50%;
+			background-color: var(--clr-white);
+			color: var(--clr-def);
+			font-size: 3rem;
+			position: relative;
+			z-index: 1;
+			&::after {
+				position: absolute;
+				z-index: -1;
+				left: -9%;
+				top: -5%;
+				content: '';
+				height: 110%;
+				width: 110%;
+				background-color: #fff;
+				border-radius: 50%;
+				opacity: .3;
+			}
+		}
+	}
+	
+	.fet-cnt-desc {
+		h5 {
+			text-transform: capitalize;
+			font-size: 2rem;
+			margin-bottom: 2rem;
+			color: var(--clr-white);
+		}
+		p {
+			margin-bottom: 2rem;
+			color: var(--clr-white);
+		}
+		.btn-2 {
+			color: var(--clr-white);
+		}
+	}
+}
+
+.fet-shp {
+	height: 10rem;
+	width: 10rem;
+	background-image: linear-gradient(59deg, transparent 0%,var(--clr-def) 100% );
+	border-radius: 50%;
+	opacity: .2;
+}
+
+.fps {
+	position: absolute;
+	bottom: 5%;
+    right: 5%;
+}
+
+.sps {
+	position: absolute;
+	bottom: 25%;
+    left: 5%;
+}

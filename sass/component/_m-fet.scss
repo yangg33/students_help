@@ -1,0 +1,50 @@
+/*-------------------------------------------------------
+13. M Fet css 
+---------------------------------------------------------*/
+
+.m-fet-wpr.grid-2 {
+    grid-gap: 8rem;
+}
+
+.m-fet-right {
+	p {
+		margin-bottom: 6rem;
+	}
+}
+
+.step-shape {
+    position: absolute;
+    bottom: -45%;
+    left: -10%;
+}
+
+.m-fet-list {
+	column-count: 2;
+	gap: 3rem;
+	li {
+		padding: 2rem 3rem;
+		border: 1px solid #ccc;
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		margin-bottom: 3rem;
+		i {
+			font-size: 2.4rem;
+			color: var(--clr-def);
+		}
+	}
+}
+
+.sub-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: var(--clr-def);
+}
+
+.main-title {
+    font-size: 4rem;
+    line-height: 5rem;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+}

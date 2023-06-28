@@ -1,0 +1,54 @@
+/*-------------------------------------------------------
+14. Step css 
+---------------------------------------------------------*/
+
+
+.step-right-content {
+    padding-left: 3rem;
+}
+
+.step-area.pos-rel {
+    z-index: 6;
+}
+
+.step-box {
+	text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 5rem 2rem 5rem 2rem;
+    background-color: var(--clr-def);
+    border-radius: 10px;
+	.step-up {
+		line-height: 1;
+		margin-bottom: 2.5rem;
+		.step-ribbon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 1rem 2rem;
+			background-color: var(--clr-white);
+			color: var(--clr-def);
+			border-radius: 0 2rem 2rem;
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			font-weight: 600;
+		}
+		
+		i {
+			font-size: 7rem;
+			display: block;
+			color: var(--clr-white);
+		}
+	}
+	.step-content {
+		h5 {
+			text-transform: capitalize;
+			font-size: 2rem;
+			margin-bottom: 2rem;
+			color: var(--clr-white);
+		}
+		p {
+			color: var(--clr-white);
+		}
+	}
+}
